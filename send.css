@@ -141,3 +141,76 @@ body{
     top: 18px;
     color: rgb(252, 193, 1);
 }
+
+
+.logo{
+    overflow: hidden;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 480px){
+    *{
+        overflow-x: hidden;
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    .send-container{
+        position: relative;
+        left: 0px;
+        width: 350px;
+        top: 80px;
+        z-index: 999;
+        
+    }
+
+    .auth{
+        width: 300px;
+        position: absolute;
+        left: 70px;
+        top:500px;
+        overflow: hidden;
+    }
+
+
+    .name{
+        width: 250px;
+        overflow: hidden;
+    }
+
+    .name p{
+        font-size: 12px;
+        
+    }
+
+    .secure{
+        position: relative;
+        left: 0px;
+    }
+
+    .message{
+        overflow: hidden;
+        /* background-color: blue; */
+        width: 330px;
+    }
+
+    .message p{
+        overflow: hidden;
+    }
+
+    .send{
+        position: absolute;
+        left: 0px;
+        top: 380px;
+        width: 340px;
+        left: 10px;
+    }
+}
