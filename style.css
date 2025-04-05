@@ -526,7 +526,7 @@ body {
         width: 40px;
         /* background-color: grey; */
         position: relative;
-        left: 140px;
+        left: 160px;
         top: 13px;
         text-align: center;
         display: block;
@@ -598,7 +598,7 @@ body {
     .main-content{
         /* background-color: red; */
         position: relative;
-        left: 0px;
+        left: 10px;
         width: 340px;
         position: relative;
         top: 10px;
@@ -621,7 +621,7 @@ body {
 
     .get{
         position: absolute;
-        left: 30px;
+        left: 35px;
         top: 420px;
         width: 300px;
     }
@@ -633,8 +633,8 @@ body {
 
     .register-container{
         position: relative;
-        left: 10px;
-        width: 340px;
+        left: 15px;
+        width: 350px;
     }
 
     .input-section{
