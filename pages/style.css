@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #E5E4E2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.header{
+    height: 50px;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+}
+
+.logo{
+    height: 50px;
+    width: 200px;
+    /* background-color: red; */
+    position: relative;
+    left: 40px;
+    overflow: hidden;
+    top:5px;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.navigations{
+    height: 50px;
+    width: 300px;
+    /* background-color: blue; */
+    position: relative;
+    left: 80px;
+    display: flex;
+}
+
+.navigations ul{
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+}
+
+.navigations ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.navigations ul a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.enter{
+    height: 50px;
+    width: 500px;
+    /* background-color: yellow; */
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+
+.privacy-policy{
+    height: 50px;
+    width: 120px;
+    /* background-color: purple; */
+    text-align: center;
+}
+
+.privacy-policy a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+}
+
+.help{
+    height: 50px;
+    width: 100px;
+    /* background-color: grey; */
+    text-align: center;
+}
+
+.help a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+}
+
+.login{
+    height: 50px;
+    width: 120px;
+    /* background-color: blue; */
+    text-align: center;
+}
+
+.login a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+}
+
+.register{
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(39, 102, 39);
+    font-size: 18px;
+    color: white;
+}
+
+
+
+.main{
+    height: 400px;
+    width: 100%;
+    /* background-color: green; */
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.main-content{
+    height: 150px;
+    width: 900px;
+    /* background-color: blue; */
+    position: relative;
+    left: 200px;
+    text-align: center;
+    top: 80px;
+}
+
+.main-content h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: #298e29;
+}
+
+.heading{
+    height: 60px;
+    width: 700px;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    left: 90px;
+    bottom: 30px;
+    
+}
+
+.main p{
+    font-weight: 400;
+}
+
+
+.get{
+    height: 60px;
+    width: 350px;
+    position: relative;
+    left: 450px;
+    top: 140px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(39, 102, 39);
+    color: white;
+}
+
+.blur{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    display: none;
+}
+
+
+.blur::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(151, 146, 146, 0.829);
+    filter: blur(150px);
+    z-index: 1;
+  }
+
+
+
+.register-container{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    filter: none;
+    z-index: 99;
+    left: 450px;
+    top: 100px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-section{
+    height: 40px;
+    width: 300px;
+    background-color: grey;
+    position: relative;
+    left: 50px;
+    border-radius: 10px;
+    display: flex;
+    background-color: #E5E4E2;
+    border: 1px solid grey;
+    margin-top: 20px;
+}
+
+.icon{
+    height: 40px;
+    width: 50px;
+    /* background-color: blue; */
+    text-align: center;
+}
+
+.icon i{
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+
+}
+
+.input-section input{
+    width: 220px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-section input:focus{
+    outline: none;
+}
+
+
+.check{
+    height: 40px;
+    width: 300px;
+    /* background-color: grey; */
+    position: relative;
+    top: 10px;
+    left: 50px;
+    display: flex;
+}
+
+
+
+.check-bx{
+    height: 40px;
+    width: 70px;
+    /* background-color: #298e29; */
+}
+
+
+.check-bx input{
+    height: 30px;
+    width: 20px;
+}
+
+.check p{
+    position: relative;
+    bottom: 15px;
+    left: 0px;
+}
+
+
+.register-btn{
+    height: 50px;
+    width: 300px;
+    position: relative;
+    top:25px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: #298e29;
+    color: white;
+}
+
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    top: 10px;
+    font-size: 20px;
+    border-radius: 100%;
+    width: 30px;
+    width: 30px;
+    text-align: center;
+    border: none;
+}
+
+.close i{
+    position: relative;
+    left: -2px;
+    top: 1px;
+    
+}
+
+
+.close:focus{
+    outline: noe;
+}
+
+
+
+.blur2{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    display: none;
+}
+
+
+.blur2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(151, 146, 146, 0.829);
+    filter: blur(150px);
+    z-index: 1;
+  }
+
+
+
+.register-container{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    filter: none;
+    z-index: 99;
+    left: 450px;
+    top: 100px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-section{
+    height: 40px;
+    width: 300px;
+    background-color: grey;
+    position: relative;
+    left: 50px;
+    border-radius: 10px;
+    display: flex;
+    background-color: #E5E4E2;
+    border: 1px solid grey;
+    margin-top: 20px;
+}
+
+.icon{
+    height: 40px;
+    width: 50px;
+    /* background-color: blue; */
+    text-align: center;
+}
+
+.icon i{
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+
+}
+
+.input-section input{
+    width: 220px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-section input:focus{
+    outline: none;
+}
+
+
+.check{
+    height: 40px;
+    width: 300px;
+    /* background-color: grey; */
+    position: relative;
+    top: 10px;
+    left: 50px;
+    display: flex;
+}
+
+
+
+.check-bx{
+    height: 40px;
+    width: 70px;
+    /* background-color: #298e29; */
+}
+
+
+.check-bx input{
+    height: 30px;
+    width: 20px;
+}
+
+.check p{
+    position: relative;
+    bottom: 15px;
+    left: 0px;
+}
+
+
+.register-btn{
+    height: 50px;
+    width: 300px;
+    position: relative;
+    top:25px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: #298e29;
+    color: white;
+}
+
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    top: 10px;
+    font-size: 20px;
+    border-radius: 100%;
+    width: 30px;
+    width: 30px;
+    text-align: center;
+    border: none;
+}
+
+.close i{
+    position: relative;
+    left: -2px;
+    top: 1px;
+    
+}
+
+
+.close:focus{
+    outline: noe;
+}
+
+.already{
+    position: relative;
+    top: 40px;
+}
+
+.already a{
+    color: #298e29;
+}
+
+
+
+@media (max-width:480px){
+    *{
+        overflow-x: hidden;
+    }
+
+    .header{
+        width: 100%;
+        background-color: blue;
+        overflow: hidden;
+    }
+
+    .navigations{
+        display: none;
+    }
+
+    .enter{
+        display: none;
+    }
+
+    .logo{
+        height: 40px;
+        width: 150px;
+        /* background-color: red; */
+        position: relative;
+        left: 60px;
+    }
+}

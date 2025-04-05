@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #EE4B2B;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.send-container{
+    height: 300px;
+    width: 800px;
+    background-color: #e5e4e276;
+    position: relative;
+    left: 230px;
+    top: 40px;
+    border-radius: 20px;
+}
+
+.header{
+    height: 70px;
+    background-color: rgb(187, 189, 193);
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+
+.logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.name{
+    height: 70px;
+    width: 300px;
+    /* background-color: red; */
+    position: relative;
+    left: 25px;
+}
+
+.name h2{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.name p{
+    font-size: 16px;
+    position: relative;
+    bottom: 10px;
+    font-weight: 500;
+}
+
+
+.secure{
+    height: 40px;
+    width: 40px;
+    background-color: grey;
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    border-radius: 100%;
+    background-color: #d54b2fb1;
+    text-align: center;
+}
+
+.secure i{
+    font-size: 24px;
+    position: relative;
+    top: 7px;
+    color: #5b180b;
+}
+
+.message{
+    height: 200px;
+    width: 740px;
+    /* background-color:; */
+    position: relative;
+    left: 10px;
+    display: flex;
+    align-items: flex-start; 
+}
+
+
+.message textarea{
+    width: 730px;
+    position: relative;
+    top: 10px;
+    height: 200px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    overflow: hidden; /* hide scrollbar */
+    resize: none; /* prevent manual resizing */
+    box-sizing: border-box;
+    padding-top: 0; /* ensure there's no extra padding pushing text down */
+    line-height: normal; /* adjust if a different value is needed */
+    text-align: left;
+    color: black;
+
+}
+
+
+.message textarea:focus{
+    outline: none;
+}
+
+.send{
+    height: 60px;
+    width: 500px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    left: 400px;
+    top: 60px;
+    background-color: black;
+    color: white;
+    font-family:  'Montserrat', sans-serif;
+}
+
+
+.auth{
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    display: flex;
+    gap: 10px;
+    
+}
+
+.auth i{
+    position: relative;
+    top: 18px;
+    color: rgb(252, 193, 1);
+}

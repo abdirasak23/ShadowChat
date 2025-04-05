@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #E5E4E2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.header{
+    height: 50px;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+}
+
+.logo{
+    height: 50px;
+    width: 200px;
+    /* background-color: red; */
+    position: relative;
+    left: 40px;
+    overflow: hidden;
+    top:5px;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.navigations{
+    height: 50px;
+    width: 300px;
+    /* background-color: blue; */
+    position: relative;
+    left: 80px;
+    display: flex;
+}
+
+.navigations ul{
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+}
+
+.navigations ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.navigations ul a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.enter{
+    height: 50px;
+    width: 500px;
+    /* background-color: yellow; */
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+
+.privacy-policy{
+    height: 50px;
+    width: 120px;
+    /* background-color: purple; */
+    text-align: center;
+}
+
+.privacy-policy a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+}
+
+.help{
+    height: 50px;
+    width: 100px;
+    /* background-color: grey; */
+    text-align: center;
+}
+
+.help a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+}
+
+.login{
+    height: 50px;
+    width: 120px;
+    /* background-color: blue; */
+    text-align: center;
+}
+
+.login a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+}
+
+.register{
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(39, 102, 39);
+    font-size: 18px;
+    color: white;
+}
+
+
+
+
+.main{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin-top: 10px;
+    /* background-color: green; */
+}
+
+
+.main h3{
+    position: relative;
+    top: 0px;
+    left: 40px;
+    font-weight: 400;
+}
+
+.message-bar{
+    height: auto;
+    min-height: 400px;
+    width: 100%;
+    /* background-color: green; */
+    overflow: hidden;
+}
+
+.message-container{
+    height: auto;
+    width: 1000px;
+    overflow: hidden;
+    border: 1px solid black;
+    background-color: white;
+    position: relative;
+    left: 40px;
+    border-radius: 20px;
+    display: block;
+    gap: 60px;
+}
+
+.privacy-policy i{
+    position: relative;
+    top: 22px;
+}
+
+.head{
+    height: 50px;
+    width: 400px;
+    /* background-color: white; */
+    display: flex;
+    border-left-color: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: black;
+    position: relative;
+    left: 10px;
+    overflow: hidden;
+}
+
+.profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.user{
+    position: relative;
+    left: 20px;
+}
+
+.message{
+    height: auto;
+    min-height: 0px;
+    width: 800px;
+    /* background-color: red; */
+    position: relative;
+    overflow: hidden;
+    top: 20px;
+    left: 10px;
+    
+    
+}
+
+.message-text{
+    /* border-bottom: 1px solid #000; */
+}
+
+.message p{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    bottom: 20px;
+}
+
+.time {
+    height: 40px;
+    position: relative;
+    left: 850px;
+}

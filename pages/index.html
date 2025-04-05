@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/style.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>ShadowChat</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="/images/shadow.png" alt="">
+        </div>
+        <div class="navigations">
+            <ul>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>How It Works</li></a>
+            </ul>
+        </div>
+        <div class="enter">
+            <div class="privacy-policy">
+                <a href="">privacy & policy</a>
+            </div>
+            <div class="help"><a href="">Help</a></div>
+            <div class="login" style="cursor: pointer;">
+            <a class="login">Login</a>
+            </div>
+            <button class="register" id="register">register</button>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="main-content">
+            <h1>TALK ANONYMOSLY WITH YOUR ROLE freinds ON INTERNET</h1>
+            <p class="heading">Kani waa midkii ugu fiicnaa ee abit aalad la sameeyo ugu wanagsana ee lagu sheesto si aan la is ogeen woww</p>
+            
+        </div>
+        <button class="get">Get Your Own Messages</button>
+        
+    </div>
+
+    <div class="blur">
+        <div class="register-container">
+            <button class="close"><i class='bx bx-x' style="cursor: pointer;"></i></button>
+            <h2>Create Account</h2>
+            <div class="input-section">
+                <div class="icon"><i class='bx bx-user'></i></div>
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="input-section">
+                <div class="icon"><i class='bx bx-envelope' ></i></div>
+                <input type="text" id="email" placeholder="email">
+            </div>
+            <div class="input-section">
+                <div class="icon"><i class='bx bx-key'></i></div>
+                <input type="password" id="password" placeholder="password">
+            </div>
+            <div class="check">
+                <div class="check-bx">
+                    <input type="checkbox" id="terms">
+                </div>
+                <p>By clicking Register you agree our <a href="">Privacy and policy</a></p>
+            </div>
+
+            <button class="register-btn" style="cursor: pointer;">
+                Register
+            </button>
+
+        </div>
+    </div>
+    <div class="blur2">
+        <div class="register-container">
+            <button class="close" id="close"><i class='bx bx-x' style="cursor: pointer;" ></i></button>
+            <h2>Welcome Back!</h2>
+            
+            <div class="input-section">
+                <div class="icon"><i class='bx bx-envelope' ></i></div>
+                <input type="text" id="login-email" placeholder="email">
+            </div>
+            <div class="input-section">
+                <div class="icon"><i class='bx bx-key'></i></div>
+                <input type="password" id="login-password" placeholder="password">
+            </div>
+            
+
+            <button class="register-btn" id="login-button" style="cursor: pointer;">
+                Login
+            </button>
+
+            <div class="already">
+                <p>Don't have an account? <a href="#" class="to-register">Register</a></p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script type="module" src="/database/authentication.js"></script>
+    <script type="module" src="/pages/app.js"></script>
+    
+</body>
+</html>
