@@ -207,7 +207,7 @@ async function copyUserLink() {
 async function checkAuth() {
   const { data: { session } } = await supabase.auth.getSession();
   if (!session) {
-    window.location.href = 'index.html';
+    window.location.href = '/index.html';
     return false;
   }
   return true;
@@ -215,7 +215,7 @@ async function checkAuth() {
 
 function handleLogout() {
   supabase.auth.signOut()
-    .then(() => window.location.href = 'index.html')
+    .then(() => window.location.href = '/index.html')
     .catch(err => console.error('Logout error:', err.message));
 }
 
