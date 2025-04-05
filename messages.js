@@ -212,7 +212,7 @@ async function handleCopyLink(event) {
     }
 
     // Generate link
-    const shareableLink = `${window.location.origin}/send.html?to=${encodeURIComponent(userData.username)}`;
+    const shareableLink = `${window.location.origin}/send.html#to=${encodeURIComponent(userData.username)}`;
 
     // Copy to clipboard
     try {
