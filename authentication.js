@@ -47,7 +47,7 @@ async function handleRegistration(event) {
 
     // Save username to separate table
     const { error: insertError } = await supabase
-      .from('usernames')
+      .from('names')
       .insert([{ user_id: data.user.id, username }]);
 
     if (insertError) throw insertError;

@@ -151,58 +151,114 @@ async function unsubscribeFromMessages() {
   }
 }
 
-async function copyUserLink() {
-  // Show loading state
-  const copyLinkText = document.querySelector('.privacy-policy a');
-  const originalText = copyLinkText.textContent;
-  copyLinkText.textContent = 'Copying...';
+  document.querySelector('.menu').addEventListener('click', function() {
+    const navs = document.querySelector('.navs');
+    navs.classList.toggle('active');
+    const icon = this.querySelector('i');
+    icon.classList.toggle('bx-menu');
+    icon.classList.toggle('bx-x');
+});
+
+// Close menu when clicking any nav link
+document.querySelectorAll('.navs a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navs = document.querySelector('.navs');
+        const menuIcon = document.querySelector('.menu i');
+        
+        // Close menu
+        navs.classList.remove('active');
+        
+        // Reset menu icon
+        menuIcon.classList.add('bx-menu');
+        menuIcon.classList.remove('bx-x');
+    });
+});
+
+async function handleCopyLink(event) {
+  event.preventDefault();
   
+  // Get all copy-related elements
+  const copyContainers = document.querySelectorAll('.copy-bar, .privacy-policy');
+  const copyIcons = document.querySelectorAll('.copy-bar i, .privacy-policy i');
+  const copyLinkText = document.querySelector('.privacy-policy a');
+  
+  // Store original states
+  const originalIconClasses = Array.from(copyIcons).map(icon => icon.className);
+  const originalText = copyLinkText?.textContent || '';
+
+  // Show loading state
+  copyIcons.forEach(icon => {
+    icon.className = 'bx bx-loader-circle animate-spin';
+  });
+  if (copyLinkText) copyLinkText.textContent = 'Copying...';
+
   try {
-    // Get the current user session
+    // Get user session
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
     
     if (sessionError || !session) {
-      alert('You need to be logged in to copy your link.');
-      copyLinkText.textContent = originalText;
-      return;
+      throw new Error('You need to be logged in to copy your link.');
     }
-    
-    // Get the username from the usernames table
-    const { data, error } = await supabase
-      .from('usernames')
+
+    // Get username
+    const { data: userData, error: userError } = await supabase
+      .from('names')
       .select('username')
       .eq('user_id', session.user.id)
       .single();
-    
-    if (error) {
-      console.error('Error fetching username:', error.message);
-      alert('Could not retrieve your username. Please try again later.');
-      copyLinkText.textContent = originalText;
-      return;
+
+    if (userError || !userData?.username) {
+      throw new Error(userError?.message || 'No username found');
     }
-    
-    // Create the shareable link
-    const baseUrl = window.location.origin;
-    const shareableLink = `${baseUrl}/user/send.html?to=${encodeURIComponent(data.username)}`;
-    
+
+    // Generate link
+    const shareableLink = `${window.location.origin}/send.html?to=${encodeURIComponent(userData.username)}`;
+
     // Copy to clipboard
-    await navigator.clipboard.writeText(shareableLink);
+    try {
+      await navigator.clipboard.writeText(shareableLink);
+    } catch (clipboardError) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = shareableLink;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+
+    // Update UI to success state
+    copyIcons.forEach(icon => {
+      icon.className = 'bx bxs-check-circle';
+    });
+    if (copyLinkText) copyLinkText.textContent = 'Copied!';
+
+  } catch (error) {
+    // Handle errors
+    console.error('Copy failed:', error);
+    alert(error.message);
     
-    
-    copyLinkText.textContent = 'Copied!';
-    
-    // Reset back to original text after 2 seconds
-    setTimeout(() => {
-      copyLinkText.textContent = originalText;
-    }, 2000);
-    
-    console.log('Link copied to clipboard:', shareableLink);
-  } catch (err) {
-    console.error('Error copying link:', err);
-    copyLinkText.textContent = originalText;
-    alert('Failed to copy link. Please try again.');
+    // Reset immediately on error
+    copyIcons.forEach((icon, index) => {
+      icon.className = originalIconClasses[index];
+    });
+    if (copyLinkText) copyLinkText.textContent = originalText;
+    return;
   }
+
+  // Reset to original state after 2 seconds
+  setTimeout(() => {
+    copyIcons.forEach((icon, index) => {
+      icon.className = originalIconClasses[index];
+    });
+    if (copyLinkText) copyLinkText.textContent = originalText;
+  }, 2000);
 }
+
+// Add event listeners to all copy elements
+document.querySelectorAll('.copy-bar, .privacy-policy').forEach(element => {
+  element.addEventListener('click', handleCopyLink);
+});
 
 async function checkAuth() {
   const { data: { session } } = await supabase.auth.getSession();
@@ -230,3 +286,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 window.addEventListener('beforeunload', unsubscribeFromMessages);
+
+

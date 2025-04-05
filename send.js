@@ -16,7 +16,7 @@ function getUsernameFromUrl() {
 async function getUserIdFromUsername(username) {
   try {
     const { data, error } = await supabase
-      .from('usernames')
+      .from('names')
       .select('user_id')
       .eq('username', username)
       .single();
