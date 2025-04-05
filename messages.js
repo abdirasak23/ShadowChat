@@ -100,7 +100,7 @@ function displayMessages(messages) {
       messageElement.innerHTML = `
         <div class="head">
           <div class="profile">
-            <img src="/images/user.jpeg" alt="Anonymous">
+            <img src="images/user.jpeg" alt="Anonymous">
           </div>
           <p class="user">Anonymous Sender</p>
         </div>
