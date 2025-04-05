@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const blurContainer2 = document.querySelector('.blur2');
     const closeButton = document.querySelector('.close');
     const closeButton2 = document.querySelector('#close');
-    const loginA = document.querySelector('.login');
+    const loginA = document.querySelector('#login');
 
     // Show blur container when Get Messages button is clicked
     getButton.addEventListener('click', function() {
@@ -41,4 +41,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // show registration popup
     blurContainer.style.display = 'block';
   });
+
+  document.querySelector('.menu').addEventListener('click', function() {
+    const navs = document.querySelector('.navs');
+    navs.classList.toggle('active');
+    const icon = this.querySelector('i');
+    icon.classList.toggle('bx-menu');
+    icon.classList.toggle('bx-x');
+});
+
+// Close menu when clicking any nav link
+document.querySelectorAll('.navs a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navs = document.querySelector('.navs');
+        const menuIcon = document.querySelector('.menu i');
+        
+        // Close menu
+        navs.classList.remove('active');
+        
+        // Reset menu icon
+        menuIcon.classList.add('bx-menu');
+        menuIcon.classList.remove('bx-x');
+    });
+});
 });

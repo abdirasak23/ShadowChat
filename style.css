@@ -1,35 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+body {
     background-color: #E5E4E2;
     font-family: 'Montserrat', sans-serif;
 }
 
 
-.header{
+.header {
     height: 50px;
     width: 100%;
     /* background-color: green; */
     display: flex;
 }
 
-.logo{
+.logo {
     height: 50px;
     width: 200px;
     /* background-color: red; */
     position: relative;
     left: 40px;
     overflow: hidden;
-    top:5px;
+    top: 5px;
 }
 
-.logo img{
+.logo img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.navigations{
+.navigations {
     height: 50px;
     width: 300px;
     /* background-color: blue; */
@@ -38,25 +38,25 @@ body{
     display: flex;
 }
 
-.navigations ul{
+.navigations ul {
     display: flex;
     gap: 40px;
     font-size: 20px;
 }
 
-.navigations ul li{
+.navigations ul li {
     list-style: none;
     text-decoration: none;
 }
 
 
-.navigations ul a{
+.navigations ul a {
     text-decoration: none;
     color: black;
 }
 
 
-.enter{
+.enter {
     height: 50px;
     width: 500px;
     /* background-color: yellow; */
@@ -65,14 +65,14 @@ body{
     right: 20px;
 }
 
-.privacy-policy{
+.privacy-policy {
     height: 50px;
     width: 120px;
     /* background-color: purple; */
     text-align: center;
 }
 
-.privacy-policy a{
+.privacy-policy a {
     text-decoration: none;
     color: black;
     font-size: 15px;
@@ -80,14 +80,14 @@ body{
     top: 20px;
 }
 
-.help{
+.help {
     height: 50px;
     width: 100px;
     /* background-color: grey; */
     text-align: center;
 }
 
-.help a{
+.help a {
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -95,14 +95,14 @@ body{
     top: 20px;
 }
 
-.login{
+.login {
     height: 50px;
     width: 120px;
     /* background-color: blue; */
     text-align: center;
 }
 
-.login a{
+.login a {
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -110,7 +110,7 @@ body{
     top: 20px;
 }
 
-.register{
+.register {
     width: 150px;
     border: none;
     border-radius: 10px;
@@ -121,7 +121,7 @@ body{
 
 
 
-.main{
+.main {
     height: 400px;
     width: 100%;
     /* background-color: green; */
@@ -130,7 +130,7 @@ body{
     display: block;
 }
 
-.main-content{
+.main-content {
     height: 150px;
     width: 900px;
     /* background-color: blue; */
@@ -140,13 +140,13 @@ body{
     top: 80px;
 }
 
-.main-content h1{
+.main-content h1 {
     font-size: 50px;
     font-weight: 900;
     color: #298e29;
 }
 
-.heading{
+.heading {
     height: 60px;
     width: 700px;
     font-size: 24px;
@@ -154,15 +154,15 @@ body{
     position: relative;
     left: 90px;
     bottom: 30px;
-    
+
 }
 
-.main p{
+.main p {
     font-weight: 400;
 }
 
 
-.get{
+.get {
     height: 60px;
     width: 350px;
     position: relative;
@@ -176,7 +176,7 @@ body{
     color: white;
 }
 
-.blur{
+.blur {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -197,11 +197,11 @@ body{
     background-color: rgba(151, 146, 146, 0.829);
     filter: blur(150px);
     z-index: 1;
-  }
+}
 
 
 
-.register-container{
+.register-container {
     width: 400px;
     height: 400px;
     position: relative;
@@ -216,7 +216,7 @@ body{
     text-align: center;
 }
 
-.input-section{
+.input-section {
     height: 40px;
     width: 300px;
     background-color: grey;
@@ -229,21 +229,21 @@ body{
     margin-top: 20px;
 }
 
-.icon{
+.icon {
     height: 40px;
     width: 50px;
     /* background-color: blue; */
     text-align: center;
 }
 
-.icon i{
+.icon i {
     position: relative;
     top: 10px;
     font-size: 20px;
 
 }
 
-.input-section input{
+.input-section input {
     width: 220px;
     border: none;
     background-color: transparent;
@@ -251,12 +251,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.input-section input:focus{
+.input-section input:focus {
     outline: none;
 }
 
 
-.check{
+.check {
     height: 40px;
     width: 300px;
     /* background-color: grey; */
@@ -268,30 +268,30 @@ body{
 
 
 
-.check-bx{
+.check-bx {
     height: 40px;
     width: 70px;
     /* background-color: #298e29; */
 }
 
 
-.check-bx input{
+.check-bx input {
     height: 30px;
     width: 20px;
 }
 
-.check p{
+.check p {
     position: relative;
     bottom: 15px;
     left: 0px;
 }
 
 
-.register-btn{
+.register-btn {
     height: 50px;
     width: 300px;
     position: relative;
-    top:25px;
+    top: 25px;
     border-radius: 10px;
     border: none;
     font-size: 18px;
@@ -299,7 +299,7 @@ body{
     color: white;
 }
 
-.close{
+.close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -312,21 +312,21 @@ body{
     border: none;
 }
 
-.close i{
+.close i {
     position: relative;
     left: -2px;
     top: 1px;
-    
+
 }
 
 
-.close:focus{
+.close:focus {
     outline: noe;
 }
 
 
 
-.blur2{
+.blur2 {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -347,11 +347,11 @@ body{
     background-color: rgba(151, 146, 146, 0.829);
     filter: blur(150px);
     z-index: 1;
-  }
+}
 
 
 
-.register-container{
+.register-container {
     width: 400px;
     height: 400px;
     position: relative;
@@ -366,7 +366,7 @@ body{
     text-align: center;
 }
 
-.input-section{
+.input-section {
     height: 40px;
     width: 300px;
     background-color: grey;
@@ -379,21 +379,21 @@ body{
     margin-top: 20px;
 }
 
-.icon{
+.icon {
     height: 40px;
     width: 50px;
     /* background-color: blue; */
     text-align: center;
 }
 
-.icon i{
+.icon i {
     position: relative;
     top: 10px;
     font-size: 20px;
 
 }
 
-.input-section input{
+.input-section input {
     width: 220px;
     border: none;
     background-color: transparent;
@@ -401,12 +401,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.input-section input:focus{
+.input-section input:focus {
     outline: none;
 }
 
 
-.check{
+.check {
     height: 40px;
     width: 300px;
     /* background-color: grey; */
@@ -418,30 +418,30 @@ body{
 
 
 
-.check-bx{
+.check-bx {
     height: 40px;
     width: 70px;
     /* background-color: #298e29; */
 }
 
 
-.check-bx input{
+.check-bx input {
     height: 30px;
     width: 20px;
 }
 
-.check p{
+.check p {
     position: relative;
     bottom: 15px;
     left: 0px;
 }
 
 
-.register-btn{
+.register-btn {
     height: 50px;
     width: 300px;
     position: relative;
-    top:25px;
+    top: 25px;
     border-radius: 10px;
     border: none;
     font-size: 18px;
@@ -449,7 +449,7 @@ body{
     color: white;
 }
 
-.close{
+.close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -462,53 +462,197 @@ body{
     border: none;
 }
 
-.close i{
+.close i {
     position: relative;
     left: -2px;
     top: 1px;
-    
+
 }
 
 
-.close:focus{
+.close:focus {
     outline: noe;
 }
 
-.already{
+.already {
     position: relative;
     top: 40px;
 }
 
-.already a{
+.already a {
     color: #298e29;
+}
+
+.menu {
+    display: none;
+}
+
+.navs {
+    display: none;
 }
 
 
 
-@media (max-width:480px){
-    *{
+@media (max-width:480px) {
+    * {
         overflow-x: hidden;
     }
 
-    .header{
+    .header {
         width: 100%;
-        background-color: blue;
+        /* background-color: blue; */
         overflow: hidden;
+        display: flex;
     }
 
-    .navigations{
+    .navigations {
         display: none;
     }
 
-    .enter{
+    .enter {
         display: none;
     }
 
-    .logo{
+    .logo {
         height: 40px;
         width: 150px;
         /* background-color: red; */
         position: relative;
-        left: 60px;
+        left: 100px;
     }
+
+    .menu {
+        height: 30px;
+        width: 40px;
+        /* background-color: grey; */
+        position: relative;
+        left: 140px;
+        top: 13px;
+        text-align: center;
+        display: block;
+    }
+
+    .menu i {
+        font-size: 24px;
+        position: relative;
+        top: 2px;
+    }
+
+    .navs {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background-color: rgba(199, 190, 190, 0.945);
+        right: 20px;
+        top: 50px;
+        z-index: 99;
+        display: none;
+        border: 1px solid black;
+    }
+
+    .navs.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .navs ul {
+        font-size: 20px;
+        position: relative;
+        bottom: 10px;
+        margin-bottom: 10px;
+        text-align: start;
+        width: 150px;
+        left: -30px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #login{
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .navs ul a {
+        text-decoration: none;
+        color: black;
+        margin-top: 5px;
+        font-weight: 500;
+    }
+
+    .register{
+        background-color: transparent;
+    }
+
+    .navs ul a:hover{
+        color: #298e29;
+    }
+
+
+    .main{
+        /* background-color: rgb(91, 100, 91); */
+        overflow: hidden;
+        height: auto;
+    }
+
+    .main-content{
+        /* background-color: red; */
+        position: relative;
+        left: 0px;
+        width: 340px;
+        position: relative;
+        top: 10px;
+        height: auto;
+    }
+
+    .main-content h1{
+        font-size: 34px;
+    }
+
+    .heading{
+        width: 300px;
+        position: relative;
+        left: 20px;
+        font-size: 18px;
+        height: auto;
+        bottom: 20px;
+        
+    }
+
+    .get{
+        position: absolute;
+        left: 30px;
+        top: 420px;
+        width: 300px;
+    }
+
+
+    .blur{
+        width: 100%;
+    }
+
+    .register-container{
+        position: relative;
+        left: 10px;
+        width: 340px;
+    }
+
+    .input-section{
+        position: relative;
+        left: 20px;
+    }
+
+    .check{
+        /* background-color: grey; */
+        position: relative;
+        left: 20px;
+    }
+
+    .check p{
+        height: 50px;
+        position: relative;
+        left: -5px;
+    }
+
+
 }
