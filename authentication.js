@@ -53,7 +53,7 @@ async function handleRegistration(event) {
     if (insertError) throw insertError;
 
     hideModal('register');
-    window.location.href = '/pages/messages.html';
+    window.location.href = 'messages.html';
   } catch (error) {
     showError(error.message);
   }
@@ -83,7 +83,7 @@ async function handleLogin(event) {
     if (error) throw error;
 
     hideModal('login');
-    window.location.href = '/pages/messages.html';
+    window.location.href = 'messages.html';
   } catch (error) {
     showError(error.message);
   }
@@ -93,7 +93,7 @@ async function handleLogin(event) {
 async function checkAuthAndRedirect() {
   try {
     const { data: { session }, error } = await supabase.auth.getSession();
-    if (session) window.location.href = '/pages/messages.html';
+    if (session) window.location.href = 'messages.html';
   } catch (error) {
     console.error('Auth check error:', error.message);
   }
