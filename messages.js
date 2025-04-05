@@ -188,7 +188,7 @@ async function copyUserLink() {
     // Copy to clipboard
     await navigator.clipboard.writeText(shareableLink);
     
-    // Show success message
+    
     copyLinkText.textContent = 'Copied!';
     
     // Reset back to original text after 2 seconds
