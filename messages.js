@@ -113,7 +113,7 @@ function displayMessages(messages) {
 
     const timeElement = document.createElement('div');
     timeElement.className = 'time';
-    timeElement.textContent = dateGroup === 'Today' 
+    timeElement.textContent = dateGroup === 'Today'
       ? `Today ${formatMessageTime(groupMessages[0].sent_at)}`
       : formatMessageTime(groupMessages[0].sent_at);
 
@@ -151,37 +151,37 @@ async function unsubscribeFromMessages() {
   }
 }
 
-  document.querySelector('.menu').addEventListener('click', function() {
-    const navs = document.querySelector('.navs');
-    navs.classList.toggle('active');
-    const icon = this.querySelector('i');
-    icon.classList.toggle('bx-menu');
-    icon.classList.toggle('bx-x');
+document.querySelector('.menu').addEventListener('click', function () {
+  const navs = document.querySelector('.navs');
+  navs.classList.toggle('active');
+  const icon = this.querySelector('i');
+  icon.classList.toggle('bx-menu');
+  icon.classList.toggle('bx-x');
 });
 
 // Close menu when clicking any nav link
 document.querySelectorAll('.navs a').forEach(link => {
-    link.addEventListener('click', () => {
-        const navs = document.querySelector('.navs');
-        const menuIcon = document.querySelector('.menu i');
-        
-        // Close menu
-        navs.classList.remove('active');
-        
-        // Reset menu icon
-        menuIcon.classList.add('bx-menu');
-        menuIcon.classList.remove('bx-x');
-    });
+  link.addEventListener('click', () => {
+    const navs = document.querySelector('.navs');
+    const menuIcon = document.querySelector('.menu i');
+
+    // Close menu
+    navs.classList.remove('active');
+
+    // Reset menu icon
+    menuIcon.classList.add('bx-menu');
+    menuIcon.classList.remove('bx-x');
+  });
 });
 
 async function handleCopyLink(event) {
   event.preventDefault();
-  
+
   // Get all copy-related elements
   const copyContainers = document.querySelectorAll('.copy-bar, .privacy-policy');
   const copyIcons = document.querySelectorAll('.copy-bar i, .privacy-policy i');
   const copyLinkText = document.querySelector('.privacy-policy a');
-  
+
   // Store original states
   const originalIconClasses = Array.from(copyIcons).map(icon => icon.className);
   const originalText = copyLinkText?.textContent || '';
@@ -195,7 +195,7 @@ async function handleCopyLink(event) {
   try {
     // Get user session
     const { data: { session }, error: sessionError } = await supabase.auth.getSession();
-    
+
     if (sessionError || !session) {
       throw new Error('You need to be logged in to copy your link.');
     }
@@ -211,8 +211,10 @@ async function handleCopyLink(event) {
       throw new Error(userError?.message || 'No username found');
     }
 
-    
-    const shareableLink = `${window.location.origin}send.html?to=${encodeURIComponent(userData.username)}`;
+    const { origin, pathname } = window.location;
+    const basePath = pathname.replace(/\/[^\/]+$/, '/'); // strip the filename
+    const shareableLink = `${origin}${basePath}send.html?to=${encodeURIComponent(userData.username)}`;
+
 
     // Copy to clipboard
     try {
@@ -237,7 +239,7 @@ async function handleCopyLink(event) {
     // Handle errors
     console.error('Copy failed:', error);
     alert(error.message);
-    
+
     // Reset immediately on error
     copyIcons.forEach((icon, index) => {
       icon.className = originalIconClasses[index];
