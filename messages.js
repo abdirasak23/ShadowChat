@@ -211,7 +211,7 @@ async function handleCopyLink(event) {
       throw new Error(userError?.message || 'No username found');
     }
 
-    // Generate link
+    
     const shareableLink = `${window.location.origin}send.html?to=${encodeURIComponent(userData.username)}`;
 
     // Copy to clipboard
