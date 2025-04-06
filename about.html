@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Shadow Chat - Secure Anonymous Connections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #10b981;
+            --neon: #00ff88;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #f8fafc;
+            min-height: 100vh;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .cyber-border {
+            position: relative;
+            border: 2px solid var(--neon);
+            box-shadow: 0 0 15px var(--neon);
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at 50% 50%, rgba(99,102,241,0.1) 0%, transparent 60%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 4rem;
+            backdrop-filter: blur(20px);
+            border-radius: 2rem;
+            background: rgba(15, 15, 15, 0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            background: linear-gradient(to right, var(--neon), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .hologram-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hologram-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .hologram-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--neon), transparent 30%);
+            animation: rotate 6s linear infinite;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(15, 15, 15, 0.9);
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        .cyber-button {
+            background: none;
+            border: 2px solid var(--neon);
+            color: var(--neon);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-button:hover {
+            background: var(--neon);
+            color: #0a0a0a;
+            box-shadow: 0 0 20px var(--neon);
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--neon);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 3s infinite;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 4rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: rgba(var(--neon), 0.05);
+            border-color: var(--neon);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0,255,136,0.3);
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 4rem;
+            background: rgba(255,255,255,0.02);
+            margin: 4rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            color: var(--neon);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 4rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--neon), transparent);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Reimagining Private Communication</h1>
+            <p class="glow-text">Where anonymity meets secure connection</p>
+            <button onclick="window.location.href='howitworks.html'" class="cyber-button" style="margin-top: 2rem;">
+                Explore the Shadows <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="particle" style="top: 20%; left: 30%; width: 5px; height: 5px;"></div>
+        <div class="particle" style="top: 70%; left: 60%; width: 8px; height: 8px;"></div>
+    </div>
+
+    <div class="grid-container">
+        <div class="hologram-card">
+            <div class="card-content">
+                <i class="fas fa-user-secret fa-3x" style="color: var(--neon); margin-bottom: 1.5rem;"></i>
+                <h2>Total Anonymity</h2>
+                <p>Zero personal data collection • No tracking • Complete privacy</p>
+            </div>
+        </div>
+
+        <div class="hologram-card">
+            <div class="card-content">
+                <i class="fas fa-shield-alt fa-3x" style="color: var(--neon); margin-bottom: 1.5rem;"></i>
+                <h2>Military Encryption</h2>
+                <p>AES-256 & RSA-4096 protection • End-to-end security</p>
+            </div>
+        </div>
+
+        <div class="hologram-card">
+            <div class="card-content">
+                <i class="fas fa-users fa-3x" style="color: var(--neon); margin-bottom: 1.5rem;"></i>
+                <h2>Seamless Connections</h2>
+                <p>Instant link sharing • Group chats • Cross-platform</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <div class="stat-item">
+            <div class="stat-value">10M+</div>
+            <p>Secure Connections</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">99.99%</div>
+            <p>Uptime Guarantee</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">0</div>
+            <p>Data Breaches</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">150+</div>
+            <p>Countries Supported</p>
+        </div>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <i class="fas fa-comment-slash fa-2x" style="color: var(--neon); margin-bottom: 1rem;"></i>
+            <h3>Zero Message Storage</h3>
+            <p>Automatic message deletion after 24 hours</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-mask fa-2x" style="color: var(--neon); margin-bottom: 1rem;"></i>
+            <h3>Complete Pseudonymity</h3>
+            <p>No real names required ever</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-cloud-slash fa-2x" style="color: var(--neon); margin-bottom: 1rem;"></i>
+            <h3>No Cloud Storage</h3>
+            <p>All data stays device-local</p>
+        </div>
+    </div>
+</body>
+</html>
