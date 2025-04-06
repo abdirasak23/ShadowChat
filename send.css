@@ -165,7 +165,7 @@ body{
 
     .send-container{
         position: absolute;
-        left: 0px;
+        left: 10px;
         width: 350px;
         top: 80px;
         z-index: 999;
@@ -208,9 +208,9 @@ body{
 
     .send{
         position: absolute;
-        left: 0px;
+        left: 20px;
         top: 400px;
         width: 340px;
-        left: 5px;
+        left: 10px;
     }
 }
