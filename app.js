@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const getButton = document.querySelector('.get');
-    const registerButton = document.querySelector('.register-btn'); // Changed from #register to .register
+    const registerButton = document.querySelector('#reg'); // Changed from #register to .register
     const blurContainer = document.querySelector('.blur');
     const blurContainer2 = document.querySelector('.blur2');
     const closeButton = document.querySelector('.close');

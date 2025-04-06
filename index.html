@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>ShadowChat</title>
 </head>
+
 <body>
 
     <div class="header">
@@ -18,39 +27,56 @@
         <div class="menu"><i class='bx bx-menu'></i></div>
         <div class="navs">
             <ul>
-                <a href=""><li>How it Works</li></a>
-                <a href=""><li>Help</li></a>
-                <a id="login"><li>Login</li></a>
-                <a id="register" class="register" href=""><li>Register</li></a>
+                <a href="howitworks.html">
+                    <li>How it Works</li>
+                </a>
+                <a href="help.html">
+                    <li>Help</li>
+                </a>
+                <a href="privacy.html">
+                    <li>Privacy & Policy</li>
+                </a>
+                <a id="login">
+                    <li>Login</li>
+                </a>
+                <a id="register" class="register-btn" href="">
+                    <li>Register</li>
+                </a>
             </ul>
         </div>
         <div class="navigations">
             <ul>
-            <a href=""><li>Home</li></a>
-            <a href=""><li>How It Works</li></a>
+                <a href="">
+                    <li>Home</li>
+                </a>
+                <a href="howitworks.html">
+                    <li>How It Works</li>
+                </a>
             </ul>
         </div>
         <div class="enter">
             <div class="privacy-policy">
-                <a href="">privacy & policy</a>
+                <a href="privacy.html">privacy & policy</a>
             </div>
-            <div class="help"><a href="">Help</a></div>
+            <div class="help"><a href="help.html">Help</a></div>
             <div class="login" style="cursor: pointer;">
-            <a class="login">Login</a>
+                <a class="login">Login</a>
             </div>
-            <button class="register" id="register">register</button>
+            <button class="register" id="reg">register</button>
         </div>
     </div>
 
 
     <div class="main">
         <div class="main-content">
-            <h1 class="typewriter">Private, real‑time conversations with your favorite live streamers—no names, no filters, just genuine connection.</h1>
-            <p class="fade-in-p heading">Generate your Shadow Link, share it, and dive into anonymous, real‑time chats—no profiles, no barriers, just pure connection.</p>
-            
+            <h1 class="typewriter">Private, real‑time conversations with your favorite live streamers—no names, no
+                filters, just genuine connection.</h1>
+            <p class="fade-in-p heading">Generate your Shadow Link, share it, and dive into anonymous, real‑time
+                chats—no profiles, no barriers, just pure connection.</p>
+
         </div>
         <button class="get">Join The Shadows</button>
-        
+
     </div>
 
     <div class="blur">
@@ -62,7 +88,7 @@
                 <input type="text" id="username" placeholder="Username">
             </div>
             <div class="input-section">
-                <div class="icon"><i class='bx bx-envelope' ></i></div>
+                <div class="icon"><i class='bx bx-envelope'></i></div>
                 <input type="text" id="email" placeholder="email">
             </div>
             <div class="input-section">
@@ -76,7 +102,7 @@
                 <p>By clicking Register you agree our <a href="">Privacy and policy</a></p>
             </div>
 
-            <button class="register-btn" style="cursor: pointer;">
+            <button class="register-btn" id="reg" style="cursor: pointer;">
                 Register
             </button>
 
@@ -84,18 +110,18 @@
     </div>
     <div class="blur2">
         <div class="register-container">
-            <button class="close" id="close"><i class='bx bx-x' style="cursor: pointer;" ></i></button>
+            <button class="close" id="close"><i class='bx bx-x' style="cursor: pointer;"></i></button>
             <h2>Welcome Back!</h2>
-            
+
             <div class="input-section">
-                <div class="icon"><i class='bx bx-envelope' ></i></div>
+                <div class="icon"><i class='bx bx-envelope'></i></div>
                 <input type="text" id="login-email" placeholder="email">
             </div>
             <div class="input-section">
                 <div class="icon"><i class='bx bx-key'></i></div>
                 <input type="password" id="login-password" placeholder="password">
             </div>
-            
+
 
             <button class="register-btn" id="login-button" style="cursor: pointer;">
                 Login
@@ -112,6 +138,7 @@
 
     <script type="module" src="authentication.js"></script>
     <script type="module" src="app.js"></script>
-    
+
 </body>
+
 </html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/7 Priority Support - Shadow Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --gold: #fcd34d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 6rem;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, var(--gold), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-section h1::after {
+            content: '24/7';
+            position: absolute;
+            right: -80px;
+            top: -15px;
+            font-size: 1.2rem;
+            color: var(--gold);
+            background: rgba(252, 211, 77, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            border: 2px solid var(--gold);
+            animation: pulse 2s infinite;
+        }
+
+        .priority-badge {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 6rem;
+        }
+
+        .support-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--primary), transparent 30%);
+            animation: rotate 6s linear infinite;
+        }
+
+        .support-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(15, 23, 42, 0.7);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .support-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .email-section {
+            text-align: center;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            padding: 4rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .email-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100" height="100" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/></svg>');
+        }
+
+        .email-address {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            display: inline-block;
+            border: 2px solid var(--gold);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .email-address {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <h1>Your Success Is Our Priority</h1>
+            <p class="subtitle">Experience world-class support whenever you need it</p>
+            <div onclick="window.location.href='mailto:support@horeye.me'" style="cursor: pointer;" class="priority-badge">
+                <i class="fas fa-star step-icon"></i>
+                <span>Premium Priority Support</span>
+            </div>
+        </div>
+
+        <div class="support-grid">
+            <div class="support-card">
+                <div class="card-content">
+                    <i class="fas fa-life-ring support-icon"></i>
+                    <h3>Instant Assistance</h3>
+                    <p>Reach out to our dedicated team any time of day through our priority email channel</p>
+                </div>
+            </div>
+
+            <div class="support-card">
+                <div class="card-content">
+                    <i class="fas fa-shield-alt support-icon"></i>
+                    <h3>Guaranteed Response</h3>
+                    <p>Get expert help within 1 hour for critical issues, 24 hours for standard inquiries</p>
+                </div>
+            </div>
+
+            <div class="support-card">
+                <div class="card-content">
+                    <i class="fas fa-headset support-icon"></i>
+                    <h3>Expert Support</h3>
+                    <p>Our team of Shadow Chat specialists is ready to resolve any issue you encounter</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-section">
+            <h2>Direct Access to Our Team</h2>
+            <p class="email-sub">We're actively monitoring this channel to serve you better</p>
+            <div onclick="window.location.href='mailto:support@horeye.me'"  class="email-address">
+                <i class="fas fa-envelope"></i>
+                support@horeye.me
+            </div>
+            <p>Average response time: <strong>23 minutes</strong></p>
+        </div>
+
+        <div class="commitment-section">
+            <div class="commitment-card">
+                <h3>Our Support Promise</h3>
+                <div class="promise-grid">
+                    <div class="promise-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>24/7 Availability</h4>
+                        <p>Round-the-clock support with no holidays</p>
+                    </div>
+                    <div class="promise-item">
+                        <i class="fas fa-user-shield"></i>
+                        <h4>Dedicated Protection</h4>
+                        <p>Enterprise-grade security for all communications</p>
+                    </div>
+                    <div class="promise-item">
+                        <i class="fas fa-heart"></i>
+                        <h4>User-Centric Approach</h4>
+                        <p>Your satisfaction is our ultimate success metric</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

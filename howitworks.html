@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>How Shadow Chat Works</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .step-content {
+            color: #4a5568;
+            font-size: 1.05rem;
+        }
+
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .step-icon {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .faq-section {
+            margin-top: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 25px;
+        }
+
+        .faq-question {
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>How Shadow Chat Works</h1>
+            <p>Connect with your audience through anonymous conversations</p>
+        </div>
+
+        <div class="steps-container">
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="icon-container">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="step-number">01</div>
+                <h3 class="step-title">Create Your Profile</h3>
+                <p class="step-content">
+                    Register as a role model by providing basic information 
+                    about yourself and your expertise area.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="icon-container">
+                    <i class="fas fa-link step-icon"></i>
+                </div>
+                <div class="step-number">02</div>
+                <h3 class="step-title">Get Unique Link</h3>
+                <p class="step-content">
+                    Instantly receive your personalized Shadow Chat URL 
+                    to share with your audience.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="icon-container">
+                    <i class="fas fa-share-alt step-icon"></i>
+                </div>
+                <div class="step-number">03</div>
+                <h3 class="step-title">Share Your Link</h3>
+                <p class="step-content">
+                    Distribute your unique URL through social media, 
+                    email, or your preferred communication channels.
+                </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="icon-container">
+                    <i class="fas fa-comments step-icon"></i>
+                </div>
+                <div class="step-number">04</div>
+                <h3 class="step-title">Receive Anonymous Messages</h3>
+                <p class="step-content">
+                    Your audience can now send you messages completely 
+                    anonymously through your personal chat portal.
+                </p>
+            </div>
+
+
+            <div class="step-card">
+                <div class="icon-container">
+                    <i class="fas fa-message step-icon"></i>
+                </div>
+                <div class="step-number">05</div>
+                <h3 class="step-title">Send Anonymous Message</h3>
+                <p class="step-content">
+                    Send anonymous messages to anyone using the shared link. 
+                    All messages are end-to-end encrypted, ensuring complete privacy and security.
+                </p>
+            </div>
+
+
+            <div class="step-card">
+                <div class="icon-container">
+                    <i class="fas fa-trash step-icon"></i>
+                </div>
+                <div class="step-number">06</div>
+                <h3 class="step-title">DisApearance of Messages</h3>
+                <p class="step-content">
+                    Messages you received anonymously will disappear 48 hours after being sent.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 style="margin-bottom: 30px;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is it really anonymous?</div>
+                <p>Yes, we don't collect any identifiable information from message senders.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I respond to messages?</div>
+                <p>No, You cannot reply the messages since the sender is anonymous!</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I manage my chat link?</div>
+                <p>You can get your link by copying from your dashboard and share your funs</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is Recieved messaged anonymous?</div>
+                <p>Yes, Messages you received anonymously is encrypted and only you can read!</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do i need account to send message</div>
+                <p>No, You dont need to send message to create account, but to receive it you have to.</p>
+            </div>
+
+            <center style="margin-top: 40px;">
+                <a href="index.html" class="cta-button">Get Started Now</a>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
