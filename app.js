@@ -65,3 +65,5 @@ document.querySelectorAll('.navs a').forEach(link => {
     });
 });
 });
+
+

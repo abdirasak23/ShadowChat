@@ -137,7 +137,7 @@ body {
     position: relative;
     left: 200px;
     text-align: center;
-    top: 80px;
+    top: 40px;
 }
 
 .main-content h1 {
@@ -152,14 +152,75 @@ body {
     font-size: 24px;
     text-align: center;
     position: relative;
-    left: 90px;
+    left: 50px;
     bottom: 30px;
 
 }
 
+.fade-in-p {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.2s; /* delay after h1 animation */
+    color: #444; /* subtle color for modern look */
+    filter: blur(2px);
+  animation: fadeInUp 1s ease forwards;
+  }
+  
+  /* Keyframe for fade-in-up */
+  @keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+  }
+
 .main p {
     font-weight: 400;
+    width: 800px;
 }
+
+.typewriter{
+    background: linear-gradient(
+    270deg,
+    #ff5f6d,
+    #ffc371,
+    #47cacc,
+    #8e2de2);
+
+    background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* 3) Initial state for fade+slide */
+  opacity: 0;
+  transform: translateY(20px);
+
+  /* 4) Animations: fade‑slide in once, gradient shift forever */
+  animation:
+    fadeSlideIn 1s ease-out forwards,
+    gradientShift 8s ease infinite;
+  animation-delay: 0.4s, 0.4s;
+
+}
+
+@keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Looping Gradient Shift */
+  @keyframes gradientShift {
+    0%   { background-position:   0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position:   0% 50%; }
+  }
+  
+
+
 
 
 .get {
@@ -167,9 +228,10 @@ body {
     width: 350px;
     position: relative;
     left: 450px;
-    top: 140px;
+    top: 220px;
     border-radius: 15px;
     border: none;
+    cursor: pointer;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(39, 102, 39);
@@ -606,17 +668,22 @@ body {
     }
 
     .main-content h1{
-        font-size: 34px;
+        font-size: 28px;
     }
 
     .heading{
-        width: 300px;
+        width: 250px;
         position: relative;
-        left: 20px;
+        left: 0px;
         font-size: 18px;
         height: auto;
-        bottom: 20px;
+        bottom: 5px;
+        word-wrap: break-word;
         
+    }
+
+    .main-content p{
+        width: 340px;
     }
 
     .get{
