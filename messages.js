@@ -286,8 +286,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   fetchUserMessages();
   subscribeToNewMessages();
 
-  document.querySelector('.privacy-policy')
-    ?.addEventListener('click', copyUserLink);
+  // document.querySelector('.privacy-policy')
+  //   ?.addEventListener('click', copyUserLink);
 
   // attach logout to _all_ .logout-btn elements
   document.querySelectorAll('.logout-btn')
