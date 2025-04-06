@@ -271,10 +271,13 @@ async function checkAuth() {
   return true;
 }
 
-function handleLogout() {
-  supabase.auth.signOut()
-    .then(() => window.location.href = '/index.html')
-    .catch(err => console.error('Logout error:', err.message));
+async function handleLogout() {
+  try {
+    await supabase.auth.signOut();
+    window.location.href = 'index.html';
+  } catch (err) {
+    console.error('Logout error:', err.message);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -283,8 +286,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   fetchUserMessages();
   subscribeToNewMessages();
 
-  document.querySelector('.privacy-policy')?.addEventListener('click', copyUserLink);
-  document.getElementById('logout')?.addEventListener('click', handleLogout);
+  document.querySelector('.privacy-policy')
+    ?.addEventListener('click', copyUserLink);
+
+  // attach logout to _all_ .logout-btn elements
+  document.querySelectorAll('.logout-btn')
+    .forEach(el => el.addEventListener('click', handleLogout));
 });
 
 window.addEventListener('beforeunload', unsubscribeFromMessages);
