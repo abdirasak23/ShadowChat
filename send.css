@@ -205,7 +205,6 @@ body{
     .message p{
         overflow: hidden;
     }
-
     .send{
         position: absolute;
         left: 20px;
