@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
@@ -11,6 +12,9 @@
     <title>Privacy First - ShadowChat</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
         :root {
             --primary: #6366f1;
             --secondary: #a855f7;
@@ -22,7 +26,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         body {
@@ -80,8 +84,8 @@
             padding: 3rem;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .policy-header {
@@ -185,24 +189,25 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
             .container {
                 padding: 2rem 1rem;
             }
-            
+
             .privacy-hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .policy-section {
                 padding: 2rem 1rem;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="privacy-hero">
@@ -302,12 +307,12 @@
         <div class="agreement-box">
             <h3>Our Privacy Covenant</h3>
             <p>By using ShadowChat, you trust us with your privacy - we honor that trust daily</p>
-            
+
             <div class="checkbox-group">
                 <input type="checkbox" id="privacy-agree">
                 <label for="privacy-agree">I understand and agree to these privacy terms</label>
             </div>
-            
+
             <button onclick="window.location.href='index.html'" class="cta-button">
                 <i class="fas fa-fingerprint"></i>
                 Continue Securely
@@ -318,4 +323,5 @@
         </div>
     </div>
 </body>
+
 </html>
