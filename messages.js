@@ -69,7 +69,7 @@ function displayMessages(messages) {
     noMessagesDiv.innerHTML = `
       <div class="message-content">
         <div class="message-center">
-          <p class="message">You don't have any messages yet.</p>
+          <p class="message" style = "position: absolute; left: 50px; font-weight:500; font-size: 20px; top: 120px;">You don't have any messages yet.</p>
         </div>
       </div>
     `;
@@ -213,7 +213,7 @@ async function handleCopyLink(event) {
 
     const { origin, pathname } = window.location;
     const basePath = pathname.replace(/\/[^\/]+$/, '/'); // strip the filename
-    const shareableLink = `${origin}${basePath}send.html?to=${encodeURIComponent(userData.username)}`;
+    const shareableLink = `${origin}/send/?to=${encodeURIComponent(userData.username)}`;
 
 
     // Copy to clipboard

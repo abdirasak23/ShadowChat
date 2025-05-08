@@ -7,10 +7,12 @@ body{
 
 
 .header{
-    height: 50px;
+    height: 60px;
     width: 100%;
-    /* background-color: green; */
+    background-color: #c4c3be8a;
     display: flex;
+    border-radius: 10px;
+    border-bottom: 3px solid #B2BEB5;
 }
 
 .logo{
@@ -100,6 +102,8 @@ body{
     width: 120px;
     /* background-color: blue; */
     text-align: center;
+    position: relative;
+    top: 15px;
 }
 
 .login a{
@@ -114,11 +118,31 @@ body{
     width: 150px;
     border: none;
     border-radius: 10px;
-    background-color: rgb(39, 102, 39);
+    background-color: #D70040;
     font-size: 18px;
     color: white;
+    position: relative;
+    top: 5px;
+    left: 60px;
+    text-align: center;
 }
 
+.register span{
+    position: relative;
+    font-weight: 600;
+    bottom: 3px;
+    font-family: 'Montserrat' ,sans-serif;
+}
+
+.privacy-policy, .help{
+    position: relative;
+    left: 50px;
+}
+
+
+.register i{
+    font-size: 24px;
+}
 
 
 
@@ -223,12 +247,18 @@ body{
 .time {
     height: 40px;
     position: relative;
-    left: 850px;
+    left: 900px;
+    top: 5px;
 }
 
 .menu{
     display: none;
 }
+
+.date-heading {
+    position: relative;
+    left: 40px;
+  }
 
 .navs{
     display: none;
